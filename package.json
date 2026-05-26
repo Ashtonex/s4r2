@@ -9,7 +9,6 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@next/swc-win32-x64-msvc": "^16.2.6",
     "@supabase/supabase-js": "^2.106.2",
     "framer-motion": "^11.11.11",
     "lucide-react": "^0.468.0",
