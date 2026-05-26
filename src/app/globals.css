@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-dark: #09090b;
+  --color-brand-card: #141417;
+  --color-brand-border: #242427;
+  --color-brand-amber: #f59e0b;
+  --color-brand-cyan: #00f0ff;
+  --color-brand-orange: #f97316;
+  --color-brand-muted: #8e8e93;
+  --color-brand-zinc-900: #18181b;
+  --color-brand-zinc-800: #27272a;
+  --color-brand-zinc-700: #3f3f46;
+  --color-brand-zinc-600: #52525b;
+}
+
+:root {
+  --background: #09090b;
+  --foreground: #fafafa;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #27272a #09090b;
+}
+
+/* Custom glow effects */
+.glow-amber {
+  text-shadow: 0 0 10px rgba(245, 158, 11, 0.4), 0 0 20px rgba(245, 158, 11, 0.2);
+}
+
+.glow-cyan {
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.5), 0 0 20px rgba(0, 240, 255, 0.3);
+}
+
+.glow-orange {
+  text-shadow: 0 0 10px rgba(249, 115, 22, 0.4), 0 0 20px rgba(249, 115, 22, 0.2);
+}
+
+.border-glow-amber:hover {
+  border-color: rgba(245, 158, 11, 0.6);
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.25);
+}
+
+.border-glow-cyan:hover {
+  border-color: rgba(0, 240, 255, 0.6);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.25);
+}
+
+/* Hide scrollbar on chrome/safari/opera */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* Metal textured styling */
+.metal-brushed {
+  background: linear-gradient(
+    135deg,
+    rgba(20, 20, 23, 0.95) 0%,
+    rgba(28, 28, 33, 0.95) 50%,
+    rgba(14, 14, 17, 0.95) 100%
+  );
+  position: relative;
+}
+
+.metal-brushed::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.003) 0px,
+    rgba(255, 255, 255, 0.003) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  pointer-events: none;
+  border-radius: inherit;
+}
